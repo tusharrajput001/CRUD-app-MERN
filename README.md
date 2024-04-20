@@ -1,7 +1,7 @@
-This is a Basic CRUD application created using MERN stack.
+This is a Basic CRUD application created using MERN stack.<br/>
 
 <h3>
-TO RUN :
+TO RUN :<br/>
 Step 1 : Run Backend server --> "npm start" <br/>
 Step 2 : Run Frontend server --> "npm run dev"<br/>
 </h3>
