@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 const Read = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
@@ -65,9 +65,9 @@ const Read = () => {
                 <a href="#" className="card-link" onClick={() => handleDelete(ele._id)}>
                   Delete
                 </a>
-                <a href="#" className="card-link">
+                <Link to={`/${ele._id}`} className="card-link">
                   Edit
-                </a>
+                </Link>
               </div>
             </div>
           </div>
