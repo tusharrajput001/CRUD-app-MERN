@@ -1,37 +1,27 @@
-//express
 const express = require("express");
 const app = express();
-
-//mongoose
 const mongoose = require("mongoose");
-
-//dotenv config
 const dotenv = require("dotenv");
-dotenv.config();
-
-
-// cors
 const cors = require("cors");
-app.use(cors());
-
-// import custom route
 const userRoute = require("./routes/userRoute");
+const DB = "mongodb+srv://devoptushar:crudpass@cluster0.xttdtn8.mongodb.net/crudapp?retryWrites=true&w=majority&appName=Cluster0";
 
-// data will converted into json
+
+dotenv.config();
+app.use(cors());
 app.use(express.json());
 
 // Mongoose Setup
-mongoose
-  .connect(process.env.URI)
-  .then(() => {
-    console.log("connected successfully");
-    app.listen(process.env.PORT || 8000, (err) => {
-      if (err) console.log(err);
-      console.log("running successfully at", process.env.PORT);
-    });
-  })
-  .catch((err) => {
-    console.log("error", err);
+mongoose.connect(DB, {
+})
+.then(() => {
+  console.log("connected successfully");
+  app.listen(process.env.PORT || 8000, (err) => {
+    if (err) console.log(err);
+    console.log("running successfully at", process.env.PORT);
   });
+})
+.catch(err => console.log(err));  
+
 
 app.use(userRoute);
