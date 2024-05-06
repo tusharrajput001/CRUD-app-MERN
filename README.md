@@ -1,7 +1,7 @@
 This is a CRUD application created using MERN stack.<br/>
 
 <h2>LIVE LINK : https://crud-app-frontend-seven.vercel.app/</h2>
-
+DEPLOYED USING VERCEL
 
 <h3>
 TO RUN IN IDE:<br/>
