@@ -15,7 +15,7 @@ const Update = () => {
     // Function to fetch single user data
     const getSingleData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/${id}`);
+        const response = await fetch(`https://crud-app-mern-three.vercel.app/${id}`);
         const result = await response.json();
 
         if (response.ok) {
@@ -39,7 +39,7 @@ const Update = () => {
     const updatedUser = { name, email, age };
 
     try {
-      const response = await fetch(`http://localhost:5000/${id}`, {
+      const response = await fetch(`https://crud-app-mern-three.vercel.app/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

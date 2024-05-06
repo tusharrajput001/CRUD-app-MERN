@@ -6,7 +6,7 @@ const Read = () => {
 
   async function getData() {
     try {
-      const response = await fetch("http://localhost:5000");
+      const response = await fetch("https://crud-app-mern-three.vercel.app/");
       const result = await response.json();
       if (!response.ok) {
         throw new Error("Failed to fetch data");
@@ -19,7 +19,7 @@ const Read = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/${id}`, {
+      const response = await fetch(`https://crud-app-mern-three.vercel.app/${id}`, {
         method: "DELETE",
       });
 

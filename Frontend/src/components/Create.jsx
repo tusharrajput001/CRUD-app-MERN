@@ -15,7 +15,7 @@ const Create = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const addUser = { name, email, age };
-    const response = await fetch("http://localhost:5000", {
+    const response = await fetch("https://crud-app-mern-three.vercel.app/", {
       method: "POST",
       body: JSON.stringify(addUser),
       headers: {
