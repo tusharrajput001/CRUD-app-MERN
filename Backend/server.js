@@ -11,7 +11,7 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-// Mongoose Setup
+// Mongoose Setup     
 mongoose.connect(DB, {
 })
 .then(() => {
