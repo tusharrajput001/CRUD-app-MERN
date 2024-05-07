@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const userRoute = require("./routes/userRoute");
-const DB = "mongodb+srv://devoptushar:crudpass@cluster0.xttdtn8.mongodb.net/crudapp?retryWrites=true&w=majority&appName=Cluster0";
+
 
 
 dotenv.config();
@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Mongoose Setup     
-mongoose.connect(DB, {
+mongoose.connect(process.env.URI, {
 })
 .then(() => {
   console.log("connected successfully");
